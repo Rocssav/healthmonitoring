@@ -49,7 +49,7 @@ function validateLogin(event) {
     if (email === localStorage.getItem("email") && password === localStorage.getItem("password")) {
         localStorage.setItem("isLoggedIn", "true");
         alert("Login Successful!");
-        window.location.replace("dashBoard.html");
+        window.location.replace("index.html");
     } else {
         alert("Invalid Credentials!");
     }
@@ -104,7 +104,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         localStorage.setItem("currentUserName", storedName); // Optional: use a separate key if you prefer
 
         alert("Login Successful! Redirecting to Dashboard...");
-        window.location.replace("dashBoard.html");
+        window.location.replace("index.html");
     } else {
         alert("Invalid email or password. Please try again.");
     }
