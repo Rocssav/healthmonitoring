@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <link rel="stylesheet" href="dashBoard.css">
+    <link rel="stylesheet" href="healthData.css">
+    <link rel="stylesheet" href="diet.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="dashboard.js" defer></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="userName.png" alt="User Photo">
+        <p id="username">Kuldeep Karma</p>
+        <ul class="nav-links">
+            <li onclick="showSection('profile')">Profile</li><br>
+            <li onclick="showSection('health-data')">Health Data</li>
+            <li onclick="showSection('diet-chart')">Diet Chart</li>
+            <li onclick="showSection('previous-data')">Previous Health Data</li>
+            <li id="logout">Logout</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="profile" class="section active">
+            <h2>Profile</h2>
+        </div>
+        <div id="health-data" class="section active">
+            <h2>Health Data</h2>
+            <div class="container">
+                <h2>Patient Health Monitoring</h2>
+                <div class="sensor">
+                    <span class="sensor-icon">🌡️</span>
+                    <span>Room Temperature:</span>
+                    <span class="sensor-value temperature">(int)temperature°C</span>
+                </div>
+                <div class="sensor">
+                    <span class="sensor-icon">💧</span>
+                    <span>Humidity:</span>
+                    <span class="sensor-value humidity">(int)humidity%</span>
+                </div>
+                <div class="sensor">
+                    <span class="sensor-icon">🌡️</span>
+                    <span>Body Temperature:</span>
+                    <span class="sensor-value bodytemp">(int)body Temperature</span>
+                </div>
+                <div class="sensor">
+                    <span class="sensor-icon">🩸</span>
+                    <span>ECG Value:</span>
+                    <span class="sensor-value ecg-status">(int)ECG status</span>
+                </div>
+                <div class="sensor">
+                    <span class="sensor-icon">🌡️</span>
+                    <span>Accelerometer:</span>
+                    <span class="sensor-value accel-x">(int)accel-x</span>
+                    <span class="sensor-value accel-y">(int)accel-y</span>
+                    <span class="sensor-value accel-z">(int)accel-z</span>
+                </div>
+            </div>
+        </div>
+        <div id="diet-chart" class="section">
+            <h2>Diet Chart</h2>
+            <div class="container">
+                <label for="goal">Select Your Goal:</label>
+                <select id="goal">
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="muscle_gain">Muscle Gain</option>
+                    <option value="balanced_diet">Balanced Diet</option>
+                </select>
+                <button onclick="suggestDiet()">Get Diet Plan</button>
+                <div id="result"></div>
+            </div>
+            <script src="diet.js"></script>
+        </div>
+        <div id="previous-data" class="section">
+            <h2>Previous Health Data</h2>
+            <button onclick="clearPreviousData()">Clear All</button>
+            <div id="previous-data-list"></div>
+           <script src="previousData.js"></script>
+        </div>
+    </div>
+   
+</body>
+</html>

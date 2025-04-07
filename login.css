@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 350px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.toggle, .forgot-password {
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.toggle:hover, .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.captcha-container {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    background: #e3e3e3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
